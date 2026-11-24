@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_incidents" android:icon="@drawable/ic_report" android:title="@string/tab_incidents" />
+    <item android:id="@+id/nav_roadworks" android:icon="@drawable/ic_construction" android:title="@string/tab_roadworks" />
+    <item android:id="@+id/nav_search" android:icon="@drawable/ic_search" android:title="@string/tab_search" />
+    <item android:id="@+id/nav_nearby" android:icon="@drawable/ic_near_me" android:title="@string/tab_nearby" />
+    <item android:id="@+id/nav_map" android:icon="@drawable/ic_map" android:title="@string/tab_map" />
+</menu>

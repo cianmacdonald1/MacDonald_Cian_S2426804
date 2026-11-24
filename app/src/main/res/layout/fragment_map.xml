@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/map_mode_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_map_all"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_all" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_map_incidents"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_incidents" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_map_roadworks"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_roadworks" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_map_selection"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_selection"
+                android:visibility="gone" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/map_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="4dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        android:textColor="?attr/colorOnSurfaceVariant" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/map_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/map_no_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/banner_sample"
+            android:padding="8dp"
+            android:text="@string/map_no_key"
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Key for the delay colour code -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/legend"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/legend_delays"
+        android:textAppearance="@style/TextAppearance.Material3.LabelSmall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:drawableStart="@drawable/dot"
+        android:drawablePadding="3dp"
+        android:drawableTint="@color/delay_none"
+        android:text="None"
+        android:textAppearance="@style/TextAppearance.Material3.LabelSmall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:drawableStart="@drawable/dot"
+        android:drawablePadding="3dp"
+        android:drawableTint="@color/delay_short"
+        android:text="Short"
+        android:textAppearance="@style/TextAppearance.Material3.LabelSmall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:drawableStart="@drawable/dot"
+        android:drawablePadding="3dp"
+        android:drawableTint="@color/delay_long"
+        android:text="Long"
+        android:textAppearance="@style/TextAppearance.Material3.LabelSmall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:drawableStart="@drawable/dot"
+        android:drawablePadding="3dp"
+        android:drawableTint="@color/delay_very_long"
+        android:text="Very long"
+        android:textAppearance="@style/TextAppearance.Material3.LabelSmall" />
+</LinearLayout>

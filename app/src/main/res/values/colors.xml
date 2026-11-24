@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- brand -->
+    <color name="brand_primary">#0B5394</color>
+    <color name="brand_on_primary">#FFFFFF</color>
+    <color name="brand_primary_container">#D3E4FF</color>
+    <color name="brand_secondary">#E37400</color>
+    <color name="banner_offline">#5F6368</color>
+    <color name="banner_sample">#8E5A00</color>
+
+    <!-- delay colour code (impact/delays/delaysType) -->
+    <color name="delay_none">#2E7D32</color>
+    <color name="delay_short">#F2A900</color>
+    <color name="delay_long">#E8590C</color>
+    <color name="delay_very_long">#C62828</color>
+
+    <!-- duration colour code (overallEndTime - overallStartTime) -->
+    <color name="duration_short">#2E7D32</color>
+    <color name="duration_medium">#F2A900</color>
+    <color name="duration_long">#C62828</color>
+    <color name="duration_unknown">#757575</color>
+
+    <!-- situation category colours (icon backgrounds + map markers) -->
+    <color name="cat_road_closed">#C62828</color>
+    <color name="cat_lane_restriction">#EF6C00</color>
+    <color name="cat_queuing">#D84315</color>
+    <color name="cat_breakdown">#6A1B9A</color>
+    <color name="cat_accident">#8E0000</color>
+    <color name="cat_obstruction">#AD6800</color>
+    <color name="cat_weather">#1565C0</color>
+    <color name="cat_roadworks">#F57F17</color>
+    <color name="cat_roadworks_closure">#B71C1C</color>
+    <color name="cat_roadworks_lane">#E65100</color>
+    <color name="cat_roadworks_lights">#2E7D32</color>
+    <color name="cat_other">#546E7A</color>
+</resources>

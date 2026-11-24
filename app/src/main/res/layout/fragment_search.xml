@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The controls at the top sit in an AppBarLayout so they scroll out of the way as the
+     results are scrolled (important in landscape where the height is limited) and come
+     back as soon as the user scrolls up again. -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/search_layout"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/search_hint"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_search">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:completionThreshold="1"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapCharacters|textNoSuggestions"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/scope_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_scope_all"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_scope_all" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_scope_incidents"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_scope_incidents" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_scope_roadworks"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_scope_roadworks" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:text="@string/popular_roads"
+            android:textAppearance="@style/TextAppearance.Material3.LabelSmall" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/quick_roads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                app:singleLine="true" />
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/result_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.Material3.TitleSmall" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/show_on_map"
+                style="@style/Widget.Material3.Button.TonalButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show_on_map"
+                app:icon="@drawable/ic_map" />
+        </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="32dp"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

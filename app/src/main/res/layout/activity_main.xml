@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PORTRAIT: toolbar on top, one content area, bottom navigation bar.
+     The details pane is stacked on top of the list and only shown when a situation is selected. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.Material3.Light"
+        app:titleTextColor="?attr/colorOnPrimary"
+        app:subtitleTextColor="?attr/colorOnPrimary"
+        app:subtitleTextAppearance="@style/TextAppearance.Material3.BodySmall" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/banner_offline"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorSurface"
+            android:elevation="4dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/navigation" />
+</LinearLayout>

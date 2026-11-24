@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LANDSCAPE: navigation rail running the full height of the left edge; to its right the toolbar,
+     then two panes side by side: the list / search / map on the left and the details of the
+     selected situation on the right.
+     Uses the same container ids as portrait so the ViewModel state carries straight over. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!-- scrolls only if a very short screen can't fit all five destinations -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <com.google.android.material.navigationrail.NavigationRailView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:labelVisibilityMode="labeled"
+            app:menuGravity="center"
+            app:menu="@menu/navigation" />
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.Material3.Light"
+            app:titleTextColor="?attr/colorOnPrimary"
+            app:subtitleTextColor="?attr/colorOnPrimary"
+            app:subtitleTextAppearance="@style/TextAppearance.Material3.BodySmall" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/banner_offline"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/list_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?attr/colorOutlineVariant" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/detail_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/colorSurfaceContainerLow" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

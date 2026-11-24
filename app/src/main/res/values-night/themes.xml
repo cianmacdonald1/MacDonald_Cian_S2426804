@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.TrafficScotland" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#A4C8FF</item>
+        <item name="colorOnPrimary">#00315F</item>
+        <item name="colorPrimaryContainer">#004786</item>
+        <item name="colorSecondary">#FFB870</item>
+    </style>
+</resources>

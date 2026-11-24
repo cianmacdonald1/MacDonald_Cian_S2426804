@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Scot Road Alerts</string>
+
+    <!-- navigation -->
+    <string name="tab_incidents">Incidents</string>
+    <string name="tab_roadworks">Roadworks</string>
+    <string name="tab_search">Road search</string>
+    <string name="tab_nearby">Nearby</string>
+    <string name="tab_map">Map</string>
+
+    <!-- toolbar menu -->
+    <string name="action_refresh">Refresh now</string>
+    <string name="action_interval">Auto-update interval</string>
+    <string name="interval_1">Every minute (demo)</string>
+    <string name="interval_15">Every 15 minutes</string>
+    <string name="interval_60">Every hour</string>
+    <string name="action_about">About &amp; credits</string>
+    <string name="back">Back</string>
+
+    <!-- status -->
+    <string name="status_updating">Updating…</string>
+    <string name="status_live">Live · updated %1$s · next %2$s</string>
+    <string name="status_cache">Offline · showing data saved %1$s</string>
+    <string name="status_sample">Showing bundled sample data</string>
+    <string name="banner_offline">No internet connection – showing the most recent saved data. It will update when you\'re back online.</string>
+    <string name="banner_no_keys">Traffic Scotland API keys are missing – showing sample data. Add TS_CLIENT_ID and TS_CLIENT_KEY to local.properties.</string>
+    <string name="banner_failed">Couldn\'t update: %1$s</string>
+    <string name="retry">Retry</string>
+    <string name="auto_refresh_set">Auto-update: %1$s</string>
+
+    <!-- lists -->
+    <string name="incidents_header">%1$d incidents</string>
+    <string name="roadworks_header">%1$d roadworks</string>
+    <string name="filter_active">Active now</string>
+    <string name="filter_upcoming">Planned</string>
+    <string name="filter_all">All</string>
+    <string name="legend_delays">Delays:</string>
+    <string name="empty_incidents">No incidents reported right now.</string>
+    <string name="empty_roadworks">No roadworks match this filter.</string>
+    <string name="loading">Loading traffic data…</string>
+
+    <!-- search -->
+    <string name="search_hint">Road name or number (e.g. M8, A9, Kingston Bridge)</string>
+    <string name="search_scope_all">Everything</string>
+    <string name="search_scope_incidents">Incidents</string>
+    <string name="search_scope_roadworks">Roadworks</string>
+    <string name="search_prompt">Type a road to see every incident and roadworks on it.</string>
+    <string name="search_none">Nothing reported on \"%1$s\".</string>
+    <string name="search_count">%1$d results for \"%2$s\"</string>
+    <string name="show_on_map">Show on map</string>
+    <string name="popular_roads">Roads with reports:</string>
+
+    <!-- nearby -->
+    <string name="nearby_title">Situations near you</string>
+    <string name="nearby_source_gcu">GCU campus (fixed)</string>
+    <string name="nearby_source_device">My location</string>
+    <string name="nearby_radius">Within %1$d km of %2$s</string>
+    <string name="nearby_count">%1$d situations found</string>
+    <string name="nearby_none">Nothing reported within %1$d km.</string>
+    <string name="nearby_locating">Finding your location…</string>
+    <string name="nearby_permission_denied">Location permission denied – using GCU campus instead.</string>
+    <string name="nearby_no_fix">Couldn\'t get a location – using GCU campus instead.</string>
+    <string name="nearby_my_location">your location</string>
+
+    <!-- map -->
+    <string name="map_all">All</string>
+    <string name="map_incidents">Incidents</string>
+    <string name="map_roadworks">Roadworks</string>
+    <string name="map_selection">Selection</string>
+    <string name="map_no_key">Add MAPS_API_KEY to local.properties to load the map tiles.</string>
+    <string name="map_count">%1$s · %2$d shown</string>
+    <string name="map_centre">Search centre</string>
+    <string name="map_tap_hint">Tap a marker, then its label, for full details</string>
+
+    <!-- details -->
+    <string name="detail_empty">Select an incident or roadworks to see the details here.</string>
+    <string name="detail_section_summary">Description breakdown</string>
+    <string name="detail_section_impact">Impact</string>
+    <string name="detail_section_when">When</string>
+    <string name="detail_section_where">Where</string>
+    <string name="detail_section_from">From</string>
+    <string name="detail_section_to">To</string>
+    <string name="detail_section_record">Record information</string>
+    <string name="detail_close">Close</string>
+
+    <!-- about -->
+    <string name="about_title">About</string>
+    <string name="about_text">Scot Road Alerts – Mobile Platform Development coursework.\n\nContains Traffic Scotland data (DATEX II feeds: Unplanned Events and Current Roadworks).\n\nIcons: Font Awesome Free by Fonticons, Inc., licensed CC BY 4.0 (fontawesome.com/license/free).\n\nMap: Google Maps SDK for Android.\n\nCian MacDonald · S2426804</string>
+    <string name="ok">OK</string>
+</resources>
