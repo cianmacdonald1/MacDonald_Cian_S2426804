@@ -1,4 +1,4 @@
-# Scot Road Alerts
+# Coursework 1
 
 Mobile Platform Development coursework 1 – Cian MacDonald (S2426804), Glasgow Caledonian University.
 
